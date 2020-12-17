@@ -1,231 +1,57 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="home-slider owl-carousel">
 
-    <div class="slider-item img-fluid img-responsive w-100" style="background-image: url('images/bg_1.jpg');">
-        <div class="overlay"></div>
-        <div class="container">
-            {{-- <div class="row slider-text justify-content-start align-items-center" data-scrollax-parent="true">
-                <div class="col-md-8 col-lg-7 col-sm-12 ftco-animate text mb-4"
-                    data-scrollax=" properties: { translateY: '70%' }">
-                    <span class="position">Top Model's</span>
-                    <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Kate
-                        Henderson</h1>
-                    <div class="d-md-flex models-info mt-5 mb-5">
-                        <div>
-                            <p>Height</p>
-                            <span>185</span>
-                        </div>
-                        <div>
-                            <p>Bust</p>
-                            <span>79</span>
-                        </div>
-                        <div>
-                            <p>Waist</p>
-                            <span>40</span>
-                        </div>
-                        <div>
-                            <p>Hips</p>
-                            <span>87</span>
-                        </div>
-                        <div>
-                            <p>Shoe</p>
-                            <span>40</span>
-                        </div>
-                        <div>
-                            <p>Eyes</p>
-                            <span>Blue</span>
-                        </div>
-                        <div>
-                            <p>Hair</p>
-                            <span>Brunet</span>
-                        </div>
-                    </div>
-                    <p><a href="#" class="btn btn-primary px-4 py-3">Read more</a> <a href="#"
-                            class="btn btn-primary btn-outline-primary px-4 py-3">View Gallery</a></p>
-                </div>
-            </div> --}}
-        </div>
-    </div>
-
-    <div class="slider-item img-fluid img-responsive w-100" style="background-image: url('images/bg_2.jpg');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row slider-text justify-content-start align-items-center" data-scrollax-parent="true">
-                {{-- <div class="col-md-8 col-lg-7 col-sm-12 ftco-animate text mb-4"
-                    data-scrollax=" properties: { translateY: '70%' }">
-                    <span class="position">Super Model's</span>
-                    <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Samantha
-                        Lewis</h1>
-                    <div class="d-md-flex models-info mt-5 mb-5">
-                        <div>
-                            <p>Height</p>
-                            <span>185</span>
-                        </div>
-                        <div>
-                            <p>Bust</p>
-                            <span>79</span>
-                        </div>
-                        <div>
-                            <p>Waist</p>
-                            <span>40</span>
-                        </div>
-                        <div>
-                            <p>Hips</p>
-                            <span>87</span>
-                        </div>
-                        <div>
-                            <p>Shoe</p>
-                            <span>40</span>
-                        </div>
-                        <div>
-                            <p>Eyes</p>
-                            <span>Blue</span>
-                        </div>
-                        <div>
-                            <p>Hair</p>
-                            <span>Brunet</span>
-                        </div>
-                    </div>
-                    <p><a href="#" class="btn btn-primary px-4 py-3">Read more</a> <a href="#"
-                            class="btn btn-primary btn-outline-primary px-4 py-3">View Gallery</a></p>
-                </div> --}}
+<div class="container">
+    <div id="carouselExampleControls" class="card card-body carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/bg_1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/bg_2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/bg_3.jpg" alt="Third slide">
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-
-    <div class="slider-item img-fluid img-responsive w-100" style="background-image: url('images/bg_3.jpg');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row slider-text justify-content-start align-items-center" data-scrollax-parent="true">
-                {{-- <div class="col-md-8 col-lg-7 col-sm-12 ftco-animate text mb-4"
-                    data-scrollax=" properties: { translateY: '70%' }">
-                    <span class="position">Photo Model's</span>
-                    <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Jessica
-                        Alba</h1>
-                    <div class="d-md-flex models-info mt-5 mb-5">
-                        <div>
-                            <p>Height</p>
-                            <span>185</span>
-                        </div>
-                        <div>
-                            <p>Bust</p>
-                            <span>79</span>
-                        </div>
-                        <div>
-                            <p>Waist</p>
-                            <span>40</span>
-                        </div>
-                        <div>
-                            <p>Hips</p>
-                            <span>87</span>
-                        </div>
-                        <div>
-                            <p>Shoe</p>
-                            <span>40</span>
-                        </div>
-                        <div>
-                            <p>Eyes</p>
-                            <span>Blue</span>
-                        </div>
-                        <div>
-                            <p>Hair</p>
-                            <span>Brunet</span>
-                        </div>
-                    </div>
-                    <p><a href="#" class="btn btn-primary px-4 py-3">Read more</a> <a href="#"
-                            class="btn btn-primary btn-outline-primary px-4 py-3">View Gallery</a></p>
-                </div> --}}
-            </div>
-        </div>
-    </div>
-
-    <div class="slider-item img-fluid img-responsive w-100" style="background-image: url('images/bg_4.jpg');">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row slider-text justify-content-start align-items-center" data-scrollax-parent="true">
-                {{-- <div class="col-md-8 col-lg-7 col-sm-12 ftco-animate text mb-4"
-                    data-scrollax=" properties: { translateY: '70%' }">
-                    <span class="position">Photo Model's</span>
-                    <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Michael
-                        Buff</h1>
-                    <div class="d-md-flex models-info mt-5 mb-5">
-                        <div>
-                            <p>Height</p>
-                            <span>185</span>
-                        </div>
-                        <div>
-                            <p>Bust</p>
-                            <span>79</span>
-                        </div>
-                        <div>
-                            <p>Waist</p>
-                            <span>40</span>
-                        </div>
-                        <div>
-                            <p>Hips</p>
-                            <span>87</span>
-                        </div>
-                        <div>
-                            <p>Shoe</p>
-                            <span>40</span>
-                        </div>
-                        <div>
-                            <p>Eyes</p>
-                            <span>Blue</span>
-                        </div>
-                        <div>
-                            <p>Hair</p>
-                            <span>Brunet</span>
-                        </div>
-                    </div>
-                    <p><a href="#" class="btn btn-primary px-4 py-3">Read more</a> <a href="#"
-                            class="btn btn-primary btn-outline-primary px-4 py-3">View Gallery</a></p>
-                </div> --}}
-            </div>
-        </div>
-    </div>
-</section>
-
+</div>
 <!-- ================ section start ================= -->
-<section class="ftco-section-2">
-    <div class="container">
-        <div class="section-2-blocks-wrapper d-flex row no-gutters">
-            <div class="img col-md-6 ftco-animate" style="background-image: url('images/bg_5.jpg');">
-            </div>
-            <div class="text col-md-6 ftco-animate bg-light">
-                <div class="text-inner align-self-start">
 
-                    <h3 class="heading">Who we are</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione harum illo eligendi provident
-                        qui nesciunt minus consequuntur? Commodi doloremque voluptas molestias ducimus similique
-                        voluptatibus obcaecati quia assumenda libero ipsum quas ratione necessitatibus, quaerat facilis
-                        itaque accusantium optio debitis quis unde.</p><p> Deleniti, et officiis, iure repellendus sint aperiam
-                        quas nobis quibusdam alias, minima reiciendis repudiandae voluptates provident. Minima, deserunt
-                        voluptates! Consectetur quis ducimus omnis ipsam totam reiciendis quisquam unde est nihil
-                        explicabo quos atque vero voluptatum numquam error laboriosam illum, perspiciatis doloribus
-                        doloremque rem fugit accusamus sint beatae!.</p>
-                    <div class="float-left">
-                        <p class="btn-view"><a href="">Know More About EMO</a> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- ================ section start ================= -->
 
 
 <!-- ================ trending product section start ================= -->
 
 <section class="calc-60px">
-<products-component guestId="{{$userUniqueId}}"></products-component>
+    <products-component guestId="{{$userUniqueId}}"></products-component>
 </section>
+
 <!-- ================ trending product section end ================= -->
 
-<!-- ================ offer section start ================= -->
-<section style="background-image: url({{asset('images/parallax-bg.png')}})" class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px"
+<div class="container card card-body">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <img src="{{ asset('images/BANNER1.jpg') }}" class="w-100 img-fluid"/>
+        </div>
+         <div class="col-xs-12 col-md-6">
+            <img src="{{ asset('images/emo 21.jpg') }}" class="w-100 img-fluid"/>
+        </div>
+    </div>
+</div>
+
+<!-- ================ offer section star
+<section style="background-image: url({{asset('images/parallax-bg.png')}})" class="offer" id="parallax-1"
+    data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px"
     data-top-bottom="background-position: 0 20px">
     <div class="container">
         <div class="row ftco-animate">
@@ -239,13 +65,15 @@
             </div>
         </div>
     </div>
-</section>
+</section>t ================= -->
 <!-- ================ offer section end ================= -->
 
 <!-- ================ trending product section end ================= -->
-<product-filter></product-filter>
+<section class="calc-60px">
+    <products-component guestId="{{$userUniqueId}}" :categories="{{$categories}}"></products-component>
+</section>
 <!-- ================ trending product section end ================= -->
-<!-- ================ Blog section end ================= -->
+<!-- ================ Blog section end ============
 <section class="ftco-section">
     <div class=" container">
         <div class="section-intro pb-60px">
@@ -301,6 +129,6 @@
             </div>
         </div>
     </div>
-</section>
+</section>===== -->
 <!-- ================ Blog section end ================= -->
 @endsection

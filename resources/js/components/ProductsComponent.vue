@@ -1,16 +1,18 @@
 <template>
   <div class=" container mt-4 mb-4">
     <div class="section-intro pb-60px">
-      <p>Popular Item in the market</p>
+      <p>Popular propducts</p>
       <h2>
-        Trending
-        <span class="section-intro__style">Product</span>
+        from
+        <span class="section-intro__style">{{productCategory}}</span>
       </h2>
     </div>
+    
+    <div class="card card-body">
     <div class="section row ftco-animate">
       <p class="text-center">{{loadingStatus}}</p>
-      <carousel :perPageCustom="[[768, 4], [1024, 5]]" :autoplay="true" :navigationEnabled="false">
-        <slide v-for="(product, index) in products" :key="index" class="col-md-6 col-lg-4 col-xl-3">
+      <!-- <carousel :perPageCustom="[[768, 4], [1024, 5]]" :autoplay="true" :navigationEnabled="false"> -->
+        <div v-for="(product, index) in computedProduct" :key="index" class="col-md-3 col-sm-6">
           <div class="card text-center card-product">
             <div class="card-product__img">
               <img class="card-img" :src="'/storage/'+product.image" alt />
@@ -35,8 +37,9 @@
               <p class="card-product__price">₦{{product.amount}}</p>
             </div>
           </div>
-        </slide>
-      </carousel>
+        </div>
+      <!-- </carousel> -->
+    </div>
     </div>
   </div>
 </template>
@@ -45,7 +48,7 @@
 import { Carousel, Slide } from "vue-carousel";
 
 export default {
-  props: ['guestid'],
+  props: ['guestid', 'categories'],
   data() {
     return {
       products: [],
@@ -56,6 +59,22 @@ export default {
   components: {
     Carousel,
     Slide
+  },
+  computed: {
+    computedProduct: function(){
+      if (this.categories && this.categories[0].products) {
+        return this.categories[0].products;
+      } else {
+        return this.products
+      }
+    },
+     productCategory: function(){
+      if (this.categories && this.categories[0].products) {
+        return this.categories[0].categoryName;
+      } else {
+        return "Our store"
+      }
+    }
   },
   methods: {
      addCart(productId, amount, productName) {

@@ -10118,6 +10118,10 @@ header .colorlib-navbar-brand .colorlib-logo span {
     border: none, border: 1px solid #acabab;
 }
 
+.slider-item {
+    height: 100px;
+}
+
 .button:disabled:hover {
     background-color: #c5c5c5;
     color: #2b2a2a;
