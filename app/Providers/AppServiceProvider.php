@@ -7,6 +7,7 @@ use App\transaction;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\ServiceProvider;
 use JeroenNoten\LaravelAdminLte\Events\BuildingMenu;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,7 +27,9 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot(Dispatcher $event)
-    {
+    { 
+         Schema::defaultStringLength(191);
+
         $event->listen(BuildingMenu::class, function (BuildingMenu $event) {
             // $transaction = transaction::where('status', 'Order Recieved')->count();
             $transaction = transaction::where('status', 'Order Recieved')->count();
