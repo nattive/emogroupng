@@ -2371,7 +2371,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       state_select: "",
       TandC: "",
       deliveryCharge: 0,
-      paystackkey: "pk_test_a33279264c8e338b29e2f5b15e98552a0f06b985"
+      paystackkey: "pk_test_968bd881ef24d6156b96a8d41c4dff76697f71f9"
     };
   },
   components: {
