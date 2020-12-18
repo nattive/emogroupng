@@ -1,9 +1,9 @@
 <template>
   <div class=" container mt-4 mb-4">
     <div class="section-intro pb-60px">
-      <p>Popular propducts</p>
+      <!-- <p>Featured</p> -->
       <h2>
-        from
+        <!-- Products -->
         <span class="section-intro__style">{{productCategory}}</span>
       </h2>
     </div>

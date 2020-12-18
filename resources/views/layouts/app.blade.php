@@ -48,7 +48,44 @@
 <body>
 
     <div class="page">
-        <nav id="colorlib-main-nav" role="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+            <div class="colorlib-navbar-brand">
+                <div class="d-flex align-content-center">
+                    <img src="{{ asset('images/logo.png') }}" alt="logo" class=" logo navbar-brand" style="width: 15%">
+                    <h6 style="align-self: center"><a href="/">EMO <br /> Fragrances</a></h6>
+                </div>
+            </div>
+            {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> --}}
+
+            <div class="col-5">
+                <form action="#" method="post" novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-sm-9 p-0">
+                                    <input type="text" class="form-control search-slt" placeholder="Enter Pickup City">
+                                </div>
+                                <div class="col-sm-3 p-0">
+                                    <button type="button" class="btn btn-danger wrn-btn"
+                                        style="color: #fff; background-color: #141d9e">search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="d-flex">
+                <div>
+
+                    <a href="/cart"><i class="fa fa-shopping-cart mr-4"></i></a>
+                </div>
+                <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle mr-4">Menu</a>
+            </div>
+        </nav>
+        <nav id="colorlib-main-nav" role="navigation" style="background-color: #141d9e">
             <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
             <div class="js-fullheight colorlib-table">
                 <div class="img" style="background-image: url(images/bg_2.jpg);"></div>
@@ -68,18 +105,7 @@
                 </div>
             </div>
         </nav>
-
         <div id="colorlib-page">
-            <header style="position: fixed bg-light">
-                <div class="colorlib-navbar-brand">
-                    <div class="d-flex align-content-center">
-                        <img src="{{ asset('images/logo.png') }}" alt="logo" class="mb-1 logo navbar-brand"
-                            style="width: 3%">
-                        <h6 style="align-self: center"><a href="/">EMO</a></h6>
-                    </div>
-                </div>
-                <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-            </header>
 
             <div id="app">
                 @yield('content')
@@ -88,8 +114,8 @@
             <section class="subscribe-position">
                 <div class="container">
                     <div class="subscribe text-center">
-                        <h3 class="subscribe__title">Get Update From Anywhere</h3>
-                        <p>Bearing Void gathering light light his eavening unto dont afraid</p>
+                        <h3 class="subscribe__title">Subscribe to Our Newsletter</h3>
+                        <p>Get a notification when we upload new products</p>
                         <div id="mc_embed_signup">
                             <form target="_blank"
                                 action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
@@ -174,10 +200,10 @@
                                             International Trade Fair Complex,
                                             Off Lagos/Badgry, Lagos.</p>
 
-                                        <p class="sm-head">
+                                        {{-- <p class="sm-head">
                                             <span class="fa fa-phone"></span>
                                             Phone Number
-                                        </p>
+                                        </p> --}}
                                         {{-- <p>
                                             +123 456 7890 <br>
                                             +123 456 7890
@@ -204,7 +230,7 @@
                             <p class="col-lg-12 footer-text text-center">
                                 Copyright &copy;<script>
                                     document.write(new Date().getFullYear());
-                                </script> All rights reserved | EMO Group Ltd
+                                </script> All rights reserved | EMO COSMETICS AND PERFUMES LTD
                             </p>
                         </div>
                     </div>
