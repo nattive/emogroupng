@@ -137,7 +137,7 @@
                       </ul>
                     </div>
                     <div class="card-body">
-                      <p>Accessories</p>
+                      <!-- <p>Accessories</p> -->
                       <h4 class="card-product__title">
                         <a href="#">Quartz Belt Watch</a>
                       </h4>

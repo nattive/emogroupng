@@ -1,9 +1,9 @@
 <template>
   <div class=" container mt-4 mb-4">
     <div class="section-intro pb-60px">
-      <!-- <p>Featured</p> -->
+      <p>Top Deals</p>
       <h2>
-        <!-- Products -->
+        from
         <span class="section-intro__style">{{productCategory}}</span>
       </h2>
     </div>
@@ -30,7 +30,7 @@
               </ul>
             </div>
             <div class="card-body">
-              <p>Accessories</p>
+              <!-- <p>Accessories</p> -->
               <h4 class="card-product__title">
                 <a :href="'/product/'+product.name">{{product.name}}</a>
               </h4>
@@ -70,7 +70,7 @@ export default {
     },
      productCategory: function(){
       if (this.categories && this.categories[0].products) {
-        return this.categories[0].categoryName;
+        return this.categories[0].categoryName + " " + "Products";
       } else {
         return "Our store"
       }
