@@ -24,7 +24,8 @@ Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/product/{slug}', 'HomeController@product')->name('product');
 Route::get('/cart', 'HomeController@cart')->name('cart');
 Route::get('/checkout', 'HomeController@checkout')->name('checkout');
-Route::get('/thankYou/{id}', 'HomeController@thankYou')->name('thankYou');
+Route::get('/track', 'HomeController@track')->name('track');
+Route::get('/thankYou/{id}', 'HomeController@thankyou')->name('thankYou');
 Route::get('/blog', 'HomeController@blog')->name('blog');
 Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/event', 'HomeController@event')->name('event');
@@ -38,7 +39,7 @@ Route::post('/message', 'MessageController@store')->name('message.store');
 // Cart
 
 Route::get('/track', 'HomeController@track');
-Route::post('/track', 'HomeController@trackshow')->name('trackshow');
+Route::post('/track', 'HomeController@trackshow')->name('track');
 Route::post('/add/cart', 'ProductController@addToCart');
 Route::post('/update/cart', 'ProductController@updateCart');
 Route::post('/checkout', 'TransactionController@checkout')->name('checkout');
@@ -66,23 +67,15 @@ Route::delete('/delete/{id}', 'ProductController@destroyInCart')->name('delete.c
 
 // Blog
 
-Route::get('/blog/{id}', 'HomeController@blogShow')->name('blogShow');
+Route::get('/blog/{id}', 'HomeController@viewpost')->name('viewpost');
 
 //Admin
 
-Route::group(['prefix' => 'api'], function () {
+// Route::group(['prefix' => 'api'], function () {
 
-    Route::get('/product', 'ProductController@fetchAll');
-    Route::get('/product/{count}', 'ProductController@pick');
-    Route::get('/product/byBrand/{brand}', 'ProductController@fetchProductByBrand');
-    Route::get('/product/byCategory/{category}', 'ProductController@fetchProductByCategory');
-    Route::get('/product/byGender/{gender}', 'ProductController@fetchProductByGender');
-    Route::get('/all/category', 'ProductController@fetchAllCategory');
-    Route::get('/all/brand', 'ProductController@fetchAllBrand');
-    Route::post('/add/cart', 'ProductController@addToCart');
+   
 
-
-});
+// });
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'AdminController@index')->name('admin.home');

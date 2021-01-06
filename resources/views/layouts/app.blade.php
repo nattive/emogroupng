@@ -39,72 +39,64 @@
 
     <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.css') }}">
     <!-- =============================== -->
 </head>
 
 <body>
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" href="/">
+                        <img src="{{ asset('images/logo.png') }}" alt="logo" class=" logo navbar-brand"
+                            style="width: 50%">
+                        <h6 style="align-self: center; margin-left: -8%; font-weight: 700">
+                            <a href="/">EMO <br /> Fragrances</a></h6>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                            <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Shop</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="{{ url('/shop') }}">Our Products</a></li>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url('/track') }}">Track your order</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url('/shop') }}">Shopping Cart</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url('/checkout') }}">Check Out</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a class="nav-link" href="{{ route('blog') }}">Blog</a>
+                            </li>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About Us</a></li>
+                        </ul>
 
+                        <ul class="nav-shop">
+                            <li class="nav-item"><button><i class="fa fa-search"></i></button></li>
+                            <li class="nav-item"><button><i class="fa fa-shopping-cart"></i><span
+                                        class="nav-shop__circle">{{Cart::content()->count()}}</span></button> </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
     <div class="page">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-            <div class="colorlib-navbar-brand">
-                <div class="d-flex align-content-center">
-                    <img src="{{ asset('images/logo.png') }}" alt="logo" class=" logo navbar-brand" style="width: 15%">
-                    <h6 style="align-self: center"><a href="/">EMO <br /> Fragrances</a></h6>
-                </div>
-            </div>
-            {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> --}}
 
-            <div class="col-5">
-                <form action="#" method="post" novalidate="novalidate">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="row">
-                                <div class="col-sm-9 p-0">
-                                    <input type="text" class="form-control search-slt" placeholder="Enter Pickup City">
-                                </div>
-                                <div class="col-sm-3 p-0">
-                                    <button type="button" class="btn btn-danger wrn-btn"
-                                        style="color: #fff; background-color: #141d9e">search</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="d-flex">
-                <div>
-
-                    <a href="/cart"><i class="fa fa-shopping-cart mr-4"></i></a>
-                </div>
-                <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle mr-4">Menu</a>
-            </div>
-        </nav>
-        <nav id="colorlib-main-nav" role="navigation" style="background-color: #141d9e">
-            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-            <div class="js-fullheight colorlib-table">
-                <div class="img" style="background-image: url(images/bg_2.jpg);"></div>
-                <div class="colorlib-table-cell js-fullheight">
-                    <div class="row no-gutters">
-                        <div class="col-md-12 text-center">
-                            Menu
-                            <ul>
-                                <li class="active"><a href="/"><span><small>01</small>Home</span></a></li>
-                                <li><a href="{{ url('/shop') }}"><span><small>02</small>Shop</span></a></li>
-                                <li><a href="{{ url('/about') }}"><span><small>03</small>About Us</span></a></li>
-                                {{-- <li><a href="{{ url('/blog') }}"><span><small>04</small>Blog</span></a></li> --}}
-                                <li><a href="{{ route('contact') }}"><span><small>05</small>Contact Us</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
         <div id="colorlib-page">
 
             <div id="app">
@@ -153,41 +145,34 @@
                         <div class="row section_gap">
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="single-footer-widget tp_widgets">
-                                    <h4 class="footer_title large_title">Our Services</h4>
+                                    <h4 class="footer_title">Our Services</h4>
                                     <p>
 
                                         In view of the foregoing, we import and market perfumes, oil, colognes, and body
                                         deodorants that meet the market needs
                                         of all categories of customers with varying budget brackets, without comprising
-                                        on the quality of these products. <p>Now
-                                            customers can choose what they want, how they want it and how much they are
-                                            willing to pay.</p>
+                                        on the quality of these products.
                                     </p>
                                 </div>
                             </div>
-                            <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+                            <div class="col-lg-2 col-md-6 col-sm-6">
                                 <div class="single-footer-widget tp_widgets">
-                                    <h4 class="footer_title">Quick Links</h4>
-                                    <ul class="list">
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="/shop">Shop</a></li>
-                                        <li><a href="/about">About Us</a></li>
-                                    </ul>
-                                </div>
+                                        <div class="single-footer-widget instafeed">
+                                            <h3 class="footer_title">Our Policy</h3>
+                                            <p>Delivery Cost Apply depending on your location and it is charged at checkout.
+                                            </p>
+                                        </div>
+                                    
+                                    </div>
                             </div>
-                            {{--    <div class="col-lg-2 col-md-6 col-sm-6">
-                        <div class="single-footer-widget instafeed">
-                            <h4 class="footer_title">Gallery</h4>
-                            <ul class="list instafeed d-flex flex-wrap">
-                                <li><img src="img/gallery/r1.jpg" alt=""></li>
-                                <li><img src="img/gallery/r2.jpg" alt=""></li>
-                                <li><img src="img/gallery/r3.jpg" alt=""></li>
-                                <li><img src="img/gallery/r5.jpg" alt=""></li>
-                                <li><img src="img/gallery/r7.jpg" alt=""></li>
-                                <li><img src="img/gallery/r8.jpg" alt=""></li>
-                            </ul>
-                        </div>
-                    </div> --}}
+                            <div class="col-lg-2 col-md-6 col-sm-6">
+                                <div class="single-footer-widget instafeed">
+                                    <h3 class="footer_title">Our Policy</h3>
+                                    <p>Delivery Cost Apply depending on your location and it is charged at checkout.
+                                    </p>
+                                </div>
+                                
+                            </div>
                             <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
                                 <div class="single-footer-widget tp_widgets">
                                     <h4 class="footer_title">Contact Us</h4>
@@ -221,9 +206,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="d-flex flex-wrap">
+                                    <li><a href="#"><i class="text-light fa fa-cc-visa"></i></a></li>
+                                    <li><a href="#"><i class="text-light fa fa-credit-card"></i></a></li>
+                                    <li><a href="#"><i class="text-light fa fa-cc-paypal"></i></a></li>
+                                    <li><a href="#"><i class="text-light fa fa-cc-mastercard"></i></a></li>
+                                    <li><a href="#"><i class="text-light fa fa-cc-discover"></i></a></li>
+                                    <li><a href="#"><i class="text-light fa fa-cc-amex"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div class="footer-bottom">
                     <div class="container">
                         <div class="row d-flex">

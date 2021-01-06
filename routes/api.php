@@ -13,4 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/fetch/product', 'ProductController@fetchAll');
+    Route::get('/fetch/product', 'ProductController@fetchAll');
+    Route::get('/product', 'ProductController@fetchAll');
+    Route::get('/product/{count}', 'ProductController@pick');
+    Route::get('/product/byBrand/{brand}', 'ProductController@fetchProductByBrand');
+    Route::get('/product/byCategory/{category}', 'ProductController@fetchProductByCategory');
+    Route::get('/product/byGender/{gender}', 'ProductController@fetchProductByGender');
+    Route::get('/all/category', 'ProductController@fetchAllCategory');
+    Route::get('/all/brand', 'ProductController@fetchAllBrand');
+    Route::post('/add/cart', 'ProductController@addToCart');

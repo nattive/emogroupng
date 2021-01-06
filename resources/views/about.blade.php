@@ -21,13 +21,11 @@
 </section>
 <!-- ================ end banner area ================= -->
 <!--================Cart Area =================-->
-<section class="ftco-section-2">
+<section class="ftco-section-2 bg-light p-2">
     <div class="container">
         <div class="section-2-blocks-wrapper d-flex row no-gutters">
-            <div class="img col-md-6 ftco-animate" style="background-image: url('images/bg_5.jpg');">
-            </div>
-            <div class="text col-md-6 ftco-animate">
-                <div class="text-inner align-self-start">
+            <div class="text col-md-12 ftco-animate">
+                <div class="text-inner align-self-center text-center">
 
                     <h3 class="heading">Who we are</h3>
                     <p>We are an indigenous company with interests in importation and distribution of beauty and

@@ -11,7 +11,7 @@
     <div class="card card-body">
     <div class="section row ftco-animate">
       <p class="text-center">{{loadingStatus}}</p>
-      <!-- <carousel :perPageCustom="[[768, 4], [1024, 5]]" :autoplay="true" :navigationEnabled="false"> -->
+      <carousel :perPageCustom="[[768, 4], [1024, 5]]" :autoplay="true" :navigationEnabled="false">
         <div v-for="(product, index) in computedProduct" :key="index" class="col-md-3 col-sm-6">
           <div class="card text-center card-product">
             <div class="card-product__img">
@@ -38,7 +38,7 @@
             </div>
           </div>
         </div>
-      <!-- </carousel> -->
+      </carousel>
     </div>
     </div>
   </div>

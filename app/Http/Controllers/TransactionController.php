@@ -55,6 +55,7 @@ class TransactionController extends Controller
         Cart::instance('shopping')->store($request->CartDetails['transactionRef']);
         Cart::instance('shopping')->destroy();
         //Notification to admin
+        return response()->json('Order Placed', 200);
     }
 
     /**
