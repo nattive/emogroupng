@@ -48,12 +48,12 @@
 <body>
     <header class="header_area">
         <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-md" style="background-color: transparent; margin: 0">
                 <div class="container">
-                    <a class="navbar-brand logo_h" href="/">
+                    <a class="navbar-brand logo_h d-none d-md-block" href="/">
                         <img src="{{ asset('images/logo.png') }}" alt="logo" class=" logo navbar-brand"
                             style="width: 50%">
-                        <h6 style="align-self: center; margin-left: -8%; font-weight: 700">
+                        <h6 style="align-self: center; margin-left: -6%; font-weight: 700" class="d-none d-md-block">
                             <a href="/">EMO <br /> Fragrances</a></h6>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -158,7 +158,7 @@
                             <div class="col-lg-2 col-md-6 col-sm-6">
                                 <div class="single-footer-widget tp_widgets">
                                         <div class="single-footer-widget instafeed">
-                                            <h3 class="footer_title">Our Policy</h3>
+                                            <h3 class="footer_title">TERMS AND CONDITIONS</h3>
                                             <p>Delivery Cost Apply depending on your location and it is charged at checkout.
                                             </p>
                                         </div>
@@ -167,8 +167,9 @@
                             </div>
                             <div class="col-lg-2 col-md-6 col-sm-6">
                                 <div class="single-footer-widget instafeed">
-                                    <h3 class="footer_title">Our Policy</h3>
-                                    <p>Delivery Cost Apply depending on your location and it is charged at checkout.
+                                    <h3 class="footer_title">Refund Policy</h3>
+                                    <p>Products sold in good condition cannot be returned, except in a case of manufacturer's error and such cases must be
+                                    reported and the products returned within 3 to 4 days from the date of lodging the complaint.
                                     </p>
                                 </div>
                                 
@@ -234,11 +235,7 @@
             </footer>
             <!--================ End footer Area  =================-->
             <!-- loader -->
-            <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-                    <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-                    <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-                        stroke="#F96D00" /></svg></div>
-
+            
         </div>
 
 
