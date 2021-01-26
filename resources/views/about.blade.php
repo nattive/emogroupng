@@ -2,22 +2,25 @@
 
 @section('content')
 <!-- ================ start banner area ================= -->
-<section class="blog-banner-area" id="category">
-    <div class="container h-100">
-        <div class="blog-banner">
-            <div class="text-center">
-                <h1>About Us</h1>
-                <nav aria-label="breadcrumb" class="banner-breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">About</li>
-                    </ol>
-                </nav>
+<section class="w3l-banner-slider-main inner-pagehny">
+    <div class="breadcrumb-infhny">
+
+        <div class="top-header-content">
+
+            @include('layouts.header')
+            <div class="breadcrumb-contentnhy">
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <h2 class="hny-title text-center">About Us</h2>
+                        <ol class="breadcrumb mb-0">
+                            <li><a href="{{ route('home') }}">Home</a>
+                                <span class="fa fa-angle-double-right"></span></li>
+                            <li class="active">About</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 <!-- ================ end banner area ================= -->
 <!--================Cart Area =================-->
@@ -86,20 +89,27 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <h3 class="heading">Our Products Statement</h3>
-                <p>While most body deodorants come in 150ml, 200ml and 250mls, most perfume and colognes arrive bottled in 100mls. Oil
-                perfumes come in lesser volumes ranging from 3ml to 30ml. Each product brand has a wide range of fragrances that keep
-                increasing with technology, time and innovation.</p>
+                <p>While most body deodorants come in 150ml, 200ml and 250mls, most perfume and colognes arrive bottled
+                    in 100mls. Oil
+                    perfumes come in lesser volumes ranging from 3ml to 30ml. Each product brand has a wide range of
+                    fragrances that keep
+                    increasing with technology, time and innovation.</p>
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="text-inner align-self-start">
 
                     <h3 class="heading">Our Core Values</h3>
-                    <p>Our business philosophy is premised upon the assumption that health is wealth, and that cleanliness is next to
-                    godliness. We would like to add that feeling good is smelling good. This philosophical approach is hinged on the wheels
-                    of five core values; of integrity, commitment, trust, honesty and passion. Driven by this philosophy and obsessed with a
-                    passion for customers’ satisfaction, we have successfully built and sustained enviable business relationships with our
-                    manufacturers, teeming customers, and the general public. This, has earned us a slogan “if it’s from EMO, it must be of
-                    high quality”. Overtime, this positive feedback has buoyed and motivated us to do even more.</p>
+                    <p>Our business philosophy is premised upon the assumption that health is wealth, and that
+                        cleanliness is next to
+                        godliness. We would like to add that feeling good is smelling good. This philosophical approach
+                        is hinged on the wheels
+                        of five core values; of integrity, commitment, trust, honesty and passion. Driven by this
+                        philosophy and obsessed with a
+                        passion for customers’ satisfaction, we have successfully built and sustained enviable business
+                        relationships with our
+                        manufacturers, teeming customers, and the general public. This, has earned us a slogan “if it’s
+                        from EMO, it must be of
+                        high quality”. Overtime, this positive feedback has buoyed and motivated us to do even more.</p>
                 </div>
             </div>
         </div>

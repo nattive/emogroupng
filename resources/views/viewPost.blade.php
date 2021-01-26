@@ -2,22 +2,28 @@
 
 @section('content')
 <!-- ================ start banner area ================= -->
-<section class="blog-banner-area" id="category">
-	<div class="container h-100">
-		<div class="blog-banner">
-			<div class="text-center">
-				<h1>Blog</h1>
-				<nav aria-label="breadcrumb" class="banner-breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="#">Home</a>
-						</li>
-						<li class="breadcrumb-item active" aria-current="page">About</li>
-					</ol>
-				</nav>
+<section class="w3l-banner-slider-main inner-pagehny">
+	<div class="breadcrumb-infhny">
+
+		<div class="top-header-content">
+
+			@include('layouts.header')
+			<div class="breadcrumb-contentnhy">
+				<div class="container">
+					<nav aria-label="breadcrumb">
+						<h2 class="hny-title text-center">{{$post -> title }}</h2>
+						<ol class="breadcrumb mb-0">
+							<li><a href="{{ route('home') }}">Home</a>
+								<span class="fa fa-angle-double-right"></span></li>
+						<li><a href="{{ route('blog') }}">Blog</a>
+								<span class="fa fa-angle-double-right"></span></li>
+						
+							<li class="active">{{$post -> title }}</li>
+						</ol>
+					</nav>
+				</div>
 			</div>
 		</div>
-	</div>
 </section>
 
 

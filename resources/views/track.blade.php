@@ -1,23 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="w3l-banner-slider-main inner-pagehny">
+    <div class="breadcrumb-infhny">
 
-<section class="blog-banner-area" id="category">
-    <div class="container h-100">
-        <div class="blog-banner">
-            <div class="text-center">
-                <h1>Order Tracking</h1>
-                <nav aria-label="breadcrumb" class="banner-breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Order Tracking</li>
-                    </ol>
-                </nav>
+        <div class="top-header-content">
+
+            @include('layouts.header')
+            <div class="breadcrumb-contentnhy">
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <h2 class="hny-title text-center">Track Order</h2>
+                        <ol class="breadcrumb mb-0">
+                            <li><a href="{{ route('home') }}">Home</a>
+                                <span class="fa fa-angle-double-right"></span></li>
+                            <li class="active">Track Order</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
 </section>
-
 <section class="tracking_box_area section-margin--small">
     <div class="container">
         <div class="tracking_box_inner">

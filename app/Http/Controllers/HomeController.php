@@ -35,8 +35,8 @@ class HomeController extends Controller
 
         //Generate a user unique id
         $userUniqueId = "guest" . random_int(99, 9999) . '_' . strtotime(random_int(1978, 2019));
-        $categories = ProductCategory::inRandomOrder()->with('products')->get();
-        return view('index', compact('userUniqueId', 'categories', 'blogs', 'categories'));
+        $ProductCategories = ProductCategory::inRandomOrder()->with('products')->get();
+        return view('index', compact('userUniqueId', 'ProductCategories', 'blogs', 'categories'));
     }
     public function shop()
     {

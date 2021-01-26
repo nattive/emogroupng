@@ -126,7 +126,11 @@
                   <div v-else class="card text-center card-product">
                     <div class="card-product__img">
                         <a :href="'/product/'+product.name">
-                      <img class="card-img" :src="'/storage/'+product.image" alt />
+                      <img
+                      class="pic-1 img-fluid"
+                      :src="
+                        '/storage/' + product.image
+                      ">
                       </a>
                       <ul class="card-product__imgOverlay">
                         <li>
