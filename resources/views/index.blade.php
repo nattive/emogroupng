@@ -124,8 +124,8 @@
                 @foreach ($ProductCategories as $category)
                 <div class="col-lg-2 col-md-4 col-6 welcome-image">
                     <div class="boxhny13">
-                        <a href="#URL">
-                            <img src="assets/images/grid3.jpg" class="img-fluid" alt="" />
+                        <a href="/shop">
+                            <img src="http://emofragrances.com/storage/product/zilN0bKUgLh6AhdgCnNw6VUUr3xVqyVVFY6wVM6U.jpeg" class="img-fluid" alt="" />
                             <div class="boxhny-content">
                                 <h3 class="title">{{$category -> categoryName}}</h3>
                             </div>
