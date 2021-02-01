@@ -47,10 +47,7 @@
                     </div>
                     <div class="subscription-left  col-lg-6 pb-5">
                         <div style="position: absolute; top: 30%; right: 0">
-                            <div class="text-right" style="margin-top: 3em">
-                                <h3 class="hny-title text-light">Get updates <br /> about our products.</h3>
-                                <p>We understand you hate junks, so we don't spam</p>
-                            </div>
+                           
                         </div>
 
                         <!--//customers -->
@@ -253,7 +250,7 @@
       });
     </script>
     <!-- disable body scroll which navbar is in active -->
-    <script src="{{ asset("assets/js/bootstrap.min.js") }} "></script>
+    {{-- <script src="{{ asset("assets/js/bootstrap.min.js") }} "></script> --}}
     <!--======================== Js ===================--->
 </body>
 

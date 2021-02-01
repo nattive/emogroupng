@@ -33,7 +33,7 @@
                                 <div class="carousel-caption">
                                     <h3 class="text-light">Shop Luxury Men's<br />
                                         Colognes</h3>
-                                    <a href="#" class="shop-button btn">
+                                   <a href="/shop" class="shop-button btn">
                                         Shop Now
                                     </a>
 
@@ -45,7 +45,7 @@
                                 <div class="carousel-caption">
                                     <h3 class="text-light">Your scent style never
                                         <br>never goes wrong</h3>
-                                    <a href="#" class="shop-button btn">
+                                   <a href="/shop" class="shop-button btn">
                                         Shop Now
                                     </a>
 
@@ -106,7 +106,7 @@
                         </a>
                 </div>
                 <div class="photo-6-inf-left col-lg-6">
-                    <img src="{{ asset('images/emo2.jpg') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('images/products/1607090624006_1607090623439_1607090623333_1607090623182_1607090622995_1607090620967_IMG-20200811-WA0019.jpg') }}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>

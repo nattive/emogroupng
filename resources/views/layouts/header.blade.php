@@ -64,7 +64,7 @@
             </div>
             <!--//left-->
             <!--/right-->
-            <ul class="top-hnt-right-content col-lg-6">
+            <ul class="top-hnt-right-content col-lg-6 d-none d-md- block">
                 <li class="transmitvcart galssescart2 cart cart box_1">
 
                     <a href="{{ route('cart') }}" class="top_transmitv_cart">

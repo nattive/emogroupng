@@ -17,14 +17,14 @@
             >
               <div class="product-grid2 transmitv">
                 <div class="product-image2">
-                  <a href="#">
+                   <a :href="'product/' + product.name">
                     <img
                       class="pic-1 img-fluid"
-                      :src="'/storage/' + product.image"
+                      :src="'http://emofragrances.com/storage/' + product.image"
                     />
                     <img
                       class="pic-2 img-fluid"
-                      :src="'/storage/' + product.image"
+                      :src="'http://emofragrances.com/storage/' + product.image"
                     />
                   </a>
                   <!-- <ul class="social">
