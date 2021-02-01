@@ -11,10 +11,19 @@
                 <li class="common-filter">
                   <form action="#">
                     <ul>
-                      <li v-for="(category, index) in categories" :key="index" class="filter-list">
-                        <input class="pixel-radio" type="radio" id="men" name="brand" />
+                      <li
+                        v-for="(category, index) in categories"
+                        :key="index"
+                        class="filter-list"
+                      >
+                        <input
+                          class="pixel-radio"
+                          type="radio"
+                          id="men"
+                          name="brand"
+                        />
                         <label for="men">
-                          {{category.categoryName}}
+                          {{ category.categoryName }}
                           <span>(3600)</span>
                         </label>
                       </li>
@@ -29,7 +38,11 @@
                 <div class="head">Brands</div>
                 <form action="#">
                   <ul>
-                    <li v-for="(brand, index) in brands" :key="index" class="filter-list">
+                    <li
+                      v-for="(brand, index) in brands"
+                      :key="index"
+                      class="filter-list"
+                    >
                       <input
                         class="pixel-radio"
                         type="radio"
@@ -38,7 +51,7 @@
                         @click="fetchbyBrand(brand.brandName)"
                       />
                       <label :for="brand.brandName">
-                        {{ brand.BrandName}}
+                        {{ brand.BrandName }}
                         <span>(29)</span>
                       </label>
                     </li>
@@ -97,7 +110,11 @@
             <!-- Start Filter Bar -->
             <div class="filter-bar d-flex flex-wrap align-items-center">
               <div class="sorting mr-auto">
-                <select class="form-control" v-model="count" @change="fetchProducts(count)">
+                <select
+                  class="form-control"
+                  v-model="count"
+                  @change="fetchProducts(count)"
+                >
                   <option selected value="8">Show 8</option>
                   <option value="12">Show 12</option>
                   <option value="all">Show all</option>
@@ -118,23 +135,29 @@
             <!-- Start Best Seller -->
             <section class="lattest-product-area pb-40 category-list">
               <div class="row">
-                <div v-for="(product, index) in products" :key="index" class="col-md-4 col-lg-3">
-                  <div
-                    class="text-center"
-                    v-if="products.length === 0"
-                  >Product list is empty at this time</div>
+                <div
+                  v-for="(product, index) in products"
+                  :key="index"
+                  class="col-md-4 col-lg-3"
+                >
+                  <div class="text-center" v-if="products.length === 0">
+                    Product list is empty at this time
+                  </div>
                   <div v-else class="card text-center card-product">
                     <div class="card-product__img">
-                        <a :href="'/product/'+product.name">
-                      <img
-                      class="pic-1 img-fluid"
-                      :src="
-                        '/storage/' + product.image
-                      ">
+                      <a :href="'/product/' + product.name">
+                        <img
+                          class="pic-1 img-fluid"
+                          :src="'/storage/' + product.image"
+                        />
                       </a>
                       <ul class="card-product__imgOverlay">
                         <li>
-                          <button>
+                          <button
+                            @click="
+                              addCart(product.id, product.amount, product.name)
+                            "
+                          >
                             <p style="color: white">Add to Cart</p>
                           </button>
                         </li>
@@ -143,9 +166,11 @@
                     <div class="card-body">
                       <!-- <p>Accessories</p> -->
                       <h4 class="card-product__title">
-                        <a href="#">Quartz Belt Watch</a>
+                        <a :href="'product/' + product.name">{{
+                          product.name
+                        }}</a>
                       </h4>
-                      <p class="card-product__price"> ₦{{product.amount}}</p>
+                      <p class="card-product__price">₦{{ product.amount }}</p>
                     </div>
                   </div>
                 </div>
@@ -172,12 +197,12 @@ export default {
       brands: [],
       categories: [],
       loadingStatus: "",
-      count: ''
+      count: "",
     };
   },
   components: {
     Carousel,
-    Slide
+    Slide,
   },
   methods: {
     addCart(productId, amount, productName) {
@@ -191,48 +216,48 @@ export default {
           amount: amount,
           qtyValue: "Single",
           name: productName,
-          guestid: this.guestid
+          guestid: this.guestid,
         })
-        .then(response => {
+        .then((response) => {
           console.log(response.data);
           this.alertMessage = response.data.msg;
+          alert(response.data.msg);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log({ message: "An Error occured: ", errors: err });
         });
       this.showDismissibleAlert = true;
     },
     fetchProducts(count) {
-        console.log(count);
-        
+      console.log(count);
+
       this.loadingStatus = "Loading please wait...";
       //Remove later on deployment
-      if (count === 'all'){
-          try {
-            axios.get("/api/product").then(Response => {
-              this.loadingStatus = "";
-              this.products = Response.data.data;
-              console.log(this.products);
-            });
-          } catch (error) {
-            this.loadingStatus = error;
-          }
+      if (count === "all") {
+        try {
+          axios.get("/api/product").then((Response) => {
+            this.loadingStatus = "";
+            this.products = Response.data.data;
+            console.log(this.products);
+          });
+        } catch (error) {
+          this.loadingStatus = error;
+        }
       } else {
-          try {
-            axios.get("/api/product/" + count).then(Response => {
-              this.loadingStatus = "";
-              this.products = Response.data.data;
-              console.log(this.products);
-            });
-          } catch (error) {
-            this.loadingStatus = error;
-          }
+        try {
+          axios.get("/api/product/" + count).then((Response) => {
+            this.loadingStatus = "";
+            this.products = Response.data.data;
+            console.log(this.products);
+          });
+        } catch (error) {
+          this.loadingStatus = error;
+        }
       }
-
     },
     fetchBrand() {
       //Remove later on deployment
-      axios.get("/api/all/brand").then(Response => {
+      axios.get("/api/all/brand").then((Response) => {
         this.brands = Response.data;
         console.log(this.brands);
       });
@@ -247,7 +272,7 @@ export default {
       this.loadingStatus = "Loading please wait...";
       //Remove later on deployment
       try {
-        axios.get("/api/product/byBrand/" + type).then(Response => {
+        axios.get("/api/product/byBrand/" + type).then((Response) => {
           this.loadingStatus = "";
           this.products = Response.data;
           console.log(this.products);
@@ -261,7 +286,7 @@ export default {
       this.loadingStatus = "Loading please wait...";
       //Remove later on deployment
       try {
-        axios.get("/api/product/byGender/" + type).then(Response => {
+        axios.get("/api/product/byGender/" + type).then((Response) => {
           this.loadingStatus = "";
           this.products = Response.data;
           console.log(this.products);
@@ -275,7 +300,7 @@ export default {
       this.loadingStatus = "Loading please wait...";
       //Remove later on deployment
       try {
-        axios.get("/api/product/byCategory/" + type).then(Response => {
+        axios.get("/api/product/byCategory/" + type).then((Response) => {
           this.loadingStatus = "";
           this.products = Response.data;
           console.log(this.products);
@@ -283,7 +308,7 @@ export default {
       } catch (error) {
         this.loadingStatus = error;
       }
-    }
+    },
   },
   mounted() {
     console.log("Component mounted.");
@@ -295,10 +320,10 @@ export default {
      * Fetch categories list
      *
      */
-    axios.get("/api/all/category").then(Response => {
+    axios.get("/api/all/category").then((Response) => {
       this.categories = Response.data;
       console.log(this.categories);
     });
-  }
+  },
 };
 </script>

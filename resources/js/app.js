@@ -32,6 +32,7 @@ Vue.component('shop-component', require('./components/ShopComponent.vue').defaul
 Vue.component('product-component', require('./components/ProductComponent.vue').default);
 Vue.component('cart-component', require('./components/CartComponent.vue').default);
 Vue.component('checkout-component', require('./components/CheckoutComponent.vue').default);
+// Vue.component('nav-menu', require('./components/NavMenu.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

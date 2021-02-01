@@ -163,7 +163,7 @@
 
               <paystack
                 v-show="paystackBtn"
-                :amount="totalPrice"
+                :amount="totalPrice * 100"
                 :email="email"
                 :paystackkey="paystackkey"
                 :reference="reference"

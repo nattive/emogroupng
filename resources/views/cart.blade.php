@@ -76,7 +76,7 @@
                                 <h5>Subtotal</h5>
                             </td>
                             <td>
-                                <h5>₦{{number_format($cartitem -> subtotal) }}</h5>
+                                <h5>₦{{number_format(Cart::instance('shopping') -> subtotal) }}</h5>
                             </td>
                         </tr>
                         <tr class="shipping_area">
