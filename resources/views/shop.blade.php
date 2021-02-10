@@ -21,8 +21,11 @@
             </div>
         </div>
 </section>
-<!-- ================ end banner area ================= -->
-<shop-component></shop-component>
-<!-- ================ top product area start ================= -->
+@if (!empty($search_products))
+    <shop-component :search_products="{{$search_products }}"></shop-component>
+@else
+    <shop-component></shop-component>
+@endif
+
 <!-- ================ Blog section end ================= -->
 @endsection

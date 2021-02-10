@@ -54,7 +54,7 @@
                   <h3 class="title">
                     <a :href="'product/' + product.name">{{ product.name }} </a>
                   </h3>
-                  <span class="price">{{ product.name }}</span>
+                  <span class="price">{{ product.amount }}</span>
                 </div>
               </div>
             </div>

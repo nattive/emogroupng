@@ -78160,7 +78160,7 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "price" }, [
-                        _vm._v(_vm._s(product.name))
+                        _vm._v(_vm._s(product.amount))
                       ])
                     ])
                   ])
