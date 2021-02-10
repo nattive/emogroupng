@@ -51,7 +51,7 @@
                                 </div>
                             </td>
                             <td>
-                                <h5>₦ {{number_format($cartitem->price )}}</h5>
+                                {{-- <h5>₦ {{number_format($cartitem->price )}}</h5> --}}
                             <p>Bulk Quantity: {{$cartitem ->options['qtyValue']}}</p>
                             </td>
                             <td>
@@ -61,7 +61,7 @@
                                 </div>
                             </td>
                             <td>
-                                <h5>₦ {{number_format($cartitem -> price * $cartitem->qty)}}</h5>
+                                {{-- <h5>₦ {{number_format($cartitem -> price * $cartitem->qty)}}</h5> --}}
                             </td>
                         </tr>
                         @endforeach
@@ -76,7 +76,7 @@
                                 <h5>Subtotal</h5>
                             </td>
                             <td>
-                                <h5>₦{{number_format(Cart::instance('shopping') -> subtotal) }}</h5>
+                                <h5>₦{{Cart::instance('shopping') -> subtotal }}</h5>
                             </td>
                         </tr>
                         <tr class="shipping_area">
@@ -87,10 +87,11 @@
 
                             </td>
                             <td>
-                                <h5>Shipping</h5>
+                                <h5 class="d-none d-md-block">Shipping</h5>
                             </td>
                             <td>
                                 <div class="shipping_box">
+                                    <div class="d-block d-md-none text-center"><h5>Shipping</h5></div>
                                     <ul class="list">
                                         <li><a href="#">Within Lagos: ₦ 1000</a></li>
                                         <li><a href="#">Outside Lagos</a></li>

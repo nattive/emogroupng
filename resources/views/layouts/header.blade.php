@@ -10,7 +10,7 @@
                         class=" logo navbar-brand">
                 </a>
                 <!--/search-right-->
-                {{-- <div class="search-right">
+                <div class="search-right">
 
                     <a href="#search" title="search"><span class="fa fa-search mr-2" aria-hidden="true"></span>
                         <span class="search-text">Search here</span></a>
@@ -18,8 +18,9 @@
                     <div id="search" class="pop-overlay">
                         <div class="popup">
 
-                            <form action="#" method="post" class="search-box">
-                                <input type="search" placeholder="Keyword" name="search" required="required"
+                            <form action="{{ route('search.products') }}" method="post" class="search-box">
+                                @csrf
+                                <input type="search" placeholder="search for product name" name="Search" required="required"
                                     autofocus="">
                                 <button type="submit" class="btn">Search</button>
                             </form>
@@ -28,7 +29,7 @@
                         <a class="close" href="#">×</a>
                     </div>
                     <!-- /search popup -->
-                </div> --}}
+                </div>
                 <!--//search-right-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -46,7 +47,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/checkout') }}">Check Out</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Who we are</a>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">Who we are</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/blog') }}">Our Blog</a>
                         </li>

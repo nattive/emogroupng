@@ -190,10 +190,10 @@
 import { Carousel, Slide } from "vue-carousel";
 
 export default {
-  props: ["guestid"],
+  props: ["guestid", 'search_products'],
   data() {
     return {
-      products: [],
+      _products: [],
       brands: [],
       categories: [],
       loadingStatus: "",
@@ -237,7 +237,7 @@ export default {
         try {
           axios.get("/api/product").then((Response) => {
             this.loadingStatus = "";
-            this.products = Response.data.data;
+            this._products = Response.data.data;
             console.log(this.products);
           });
         } catch (error) {
@@ -310,6 +310,15 @@ export default {
       }
     },
   },
+  computed: {
+    products(){
+      if(this.search_products){
+        return this.search_products
+      } else{
+        return this._products
+      }
+    }
+  }
   mounted() {
     console.log("Component mounted.");
     this.fetchProducts(9);

@@ -51,7 +51,8 @@ class HomeController extends Controller
     }
     public function cart()
     {
-        // dd(Cart::instance('shopping')->content());
+        //    Cart::instance('shopping')->destroy();
+
         return view('cart');
     }
     public function checkout()
@@ -103,5 +104,17 @@ class HomeController extends Controller
         }
 
     }
-
+    public function Subscribe(Request $request)
+    {
+        $data = $request->validate([
+            'email' => 'required|unique:subscribers',
+        ]);
+        subscriber::create($data);
+        return \route('home');
+    }
+     public function search()
+    {
+        $search_products = product::where('name', 'like', '%' . request('Search') . '%')->get();
+        return view('shop', compact('search_products'));
+    }
 }

@@ -35,7 +35,7 @@
                             <h3 class="hny-title">Join us for FREE to get instant <span>email updates!</span></h3>
                             <p>Subscribe and get notified at first on the latest update and offers!</p>
 
-                            <form action="#" method="post" class="signin-form mt-lg-5 mt-4">
+                            <form action="{{ route('Subscribe') }}" method="post" class="signin-form mt-lg-5 mt-4">
                                 <div class="forms-gds">
                                     <div class="form-input">
                                         <input type="email" name="" placeholder="Your email here" required="">
@@ -55,6 +55,9 @@
                 </div>
             </div>
     </section>
+    <div class="d-block d-md-none">
+        <a href="{{ url('cart') }}" class="shopping">Cart <sup>{{Cart::content()->count()}}</sup></a>
+    </div>
     <section class="w3l-footer-22">
         <!-- footer-22 -->
         <div class="footer-hny py-5">
@@ -180,6 +183,7 @@
         </script>
         <!-- /move top -->
     </section>
+    {{-- Shop button --}}
     <!--======================== Js ===================--->
     <script src="{{ asset("assets/js/jquery-3.3.1.min.js") }} "></script>
     <script src="{{ asset("assets/js/jquery-2.1.4.min.js") }} "></script>

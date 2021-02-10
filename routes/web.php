@@ -49,7 +49,7 @@ Route::post('/search', 'HomeController@search')->name('search.products');
 
 //Subscribers
 
-Route::post('/Subscribe', 'HomeController@Subscribe')->name('SubscribeBtn');
+Route::post('/Subscribe', 'HomeController@Subscribe')->name('Subscribe');
 
 Route::delete('/delete/{id}', 'ProductController@destroyInCart')->name('delete.cart');
 
