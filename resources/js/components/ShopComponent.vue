@@ -318,7 +318,7 @@ export default {
         return this._products
       }
     }
-  }
+  },
   mounted() {
     console.log("Component mounted.");
     this.fetchProducts(9);

@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->integer('product_category_id');
             $table->longText('description');
             $table->string('pack')->nullable();
+            $table->string('carton')->nullable();
             $table->string('image');
             $table->timestamps();
         });

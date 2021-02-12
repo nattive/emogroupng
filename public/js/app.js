@@ -3007,20 +3007,21 @@ __webpack_require__.r(__webpack_exports__);
       qtySpec: "Single",
       init_qty: 1,
       prod__price: 0,
-      productDozen: 112000,
       proceedCart: false
     };
   },
-  props: ["brand", "productid", "productbrand_id", "productdescription", "productgenderspecification", "productimage", "productname", "productpack", "productstock", "productamount"],
+  props: ["brand", "productid", "productbrand_id", "productdescription", "productgenderspecification", "productimage", "productname", "productpack", "productstock", "productamount", 'productcarton'],
   computed: {
     // get only
     init__price: function init__price() {
       if (this.qtySpec === "Single") {
         return this.productamount;
       } else if (this.qtySpec === "Dozen") {
-        return this.productDozen;
-      } else {
         return this.productpack;
+      } else if (this.qtySpec === "Carton") {
+        return this.productcarton;
+      } else {
+        return this.productamount;
       }
     } // both get and set
 
@@ -3432,10 +3433,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["guestid"],
+  props: ["guestid", 'search_products'],
   data: function data() {
     return {
-      products: [],
+      _products: [],
       brands: [],
       categories: [],
       loadingStatus: "",
@@ -3482,7 +3483,7 @@ __webpack_require__.r(__webpack_exports__);
         try {
           axios.get("/api/product").then(function (Response) {
             _this2.loadingStatus = "";
-            _this2.products = Response.data.data;
+            _this2._products = Response.data.data;
             console.log(_this2.products);
           });
         } catch (error) {
@@ -3558,6 +3559,15 @@ __webpack_require__.r(__webpack_exports__);
         });
       } catch (error) {
         this.loadingStatus = error;
+      }
+    }
+  },
+  computed: {
+    products: function products() {
+      if (this.search_products) {
+        return this.search_products;
+      } else {
+        return this._products;
       }
     }
   },
@@ -77876,7 +77886,13 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _vm._m(10),
+                      _c("tr", [
+                        _vm._m(10),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("h5", [_vm._v("₦" + _vm._s(_vm.productpack))])
+                        ])
+                      ]),
                       _vm._v(" "),
                       _c("tr", [
                         _vm._m(11),
@@ -78051,11 +78067,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("td", [_c("h5", [_vm._v("Dozen")])]),
-      _vm._v(" "),
-      _c("td", [_c("h5", [_vm._v("₦ (UNSET)")])])
-    ])
+    return _c("td", [_c("h5", [_vm._v("Dozen")])])
   },
   function() {
     var _vm = this
@@ -78160,7 +78172,7 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("span", { staticClass: "price" }, [
-                        _vm._v(_vm._s(product.amount))
+                        _vm._v("₦" + _vm._s(product.amount))
                       ])
                     ])
                   ])

@@ -44,6 +44,12 @@
                                 <input type="number" class="form-control" name="pack" value="{{ old('pack') }}" required autocomplete="pack" >
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="Picture">Price per Carton</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" name="carton" value="{{ old('pack') }}"  autocomplete="pack">
+                            </div>
+                        </div>
                     </div>
                     <!-- /.card-body -->
 
