@@ -10127,6 +10127,18 @@ header .colorlib-navbar-brand .colorlib-logo span {
     transition: all .2s ease-out;
 }
 
+.button__qty__select {
+    cursor: pointer;
+    height: 40px;
+    padding: 0px 44px;
+    line-height: 38px;
+    text-transform: capitalize;
+    background: #384aeb;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500
+}
+
 .button__qty__selected {
     background: transparent !important;
     color: #384aeb !important;
@@ -12183,5 +12195,7 @@ header .colorlib-navbar-brand .colorlib-logo span {
     }
 }
 
+
+}
 
 }

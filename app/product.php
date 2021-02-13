@@ -14,7 +14,8 @@ class product extends Model
         'description',
         'image',
         'genderSpec',
-        'brand'
+        'brand',
+        'carton'
     ];
 
     public function ProductCategory()

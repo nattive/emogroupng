@@ -78,7 +78,7 @@
         <!-- ./col -->
     </div>
     <div class="row">
-        <div class="col-sm-12 col-md-6">
+        {{-- <div class="col-sm-12 col-md-6">
             <div class="card card-info">
                 <div class="card-header">
                     <h3 class="card-title">Upload testimonial</h3>
@@ -90,7 +90,7 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group row">
-                            {{-- <label for="inputEmail3" class="col-sm-2 control-label">Name</label> --}}
+                            <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-12">
                                 <input type="text" class="form-control" placeholder="Name" name="name">
                             </div>
@@ -105,7 +105,7 @@
                         </div>
                         <hr>
                         <div class="form-group row">
-                            {{-- <label for="inputPassword3" class="col-sm-2 control-label">testimonial</label> --}}
+                            <label for="inputPassword3" class="col-sm-2 control-label">testimonial</label>
                             <div class="col-sm-12">
                                 <textarea class="form-control" placeholder="testimonial" name="Body"
                                     required></textarea>
@@ -119,8 +119,8 @@
                     <!-- /.card-footer -->
                 </form>
             </div>
-        </div>
-        <div class="col-sm-12 col-md-6">
+        </div> --}}
+        {{-- <div class="col-sm-12 col-md-6">
             <div class="card card-info">
                 <div class="card-header">
                     <h3 class="card-title">Upload Gallery Image</h3>
@@ -138,9 +138,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            {{-- <label for="inputEmail3" class="col-sm-2 control-label">Name</label> --}}
+                            <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
                             <div class="col-sm-12">
-                                {{-- <input type="text" class="form-control" placeholder="Caption" name="caption"> --}}
+                                <input type="text" class="form-control" placeholder="Caption" name="caption">
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                     <!-- /.card-footer -->
                 </form>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 

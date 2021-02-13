@@ -43,7 +43,7 @@
     <!-- /.card-body -->
 
 </div>
-<h4 class="text-center">Shopping  Details</h4>
+<h4 class="text-center">Shopping Details</h4>
 <div class="card">
     <!-- /.card-header -->
     <div class="card-body">
@@ -59,7 +59,14 @@
                 </tr>
             </thead>
             <tbody>
-              {{ dd(Cart::restore('GAC-6425149-15'))}}
+                <tr>
+                    @foreach ($carts->content as $cart)
+                    <td>{{$cart -> id}}</td>
+                    <td>{{$cart -> name}}</td>
+                    <td>{{$cart -> qty}}</td>
+                    <td>{{$cart -> subtotal}}</td>
+                    @endforeach
+                </tr>
             </tbody>
         </table>
     </div>

@@ -91,6 +91,7 @@ class AdminController extends Controller
             'name' => 'max:255',
             'amount' => 'required',
             'stock' => 'required',
+            'carton' => '',
             'Picture' => 'required',
             'description' => 'required',
             'pack' => '',
@@ -102,6 +103,7 @@ class AdminController extends Controller
         $image = Image::make(public_path("storage/{$imagePath}"))->fit(600, 800);
         $image->save();
         $product->name = $request->name;
+        $product->carton = $request->carton;
         $product->pack = $request->pack;
         $product->amount = $request->amount;
         $product->description = $request->description;
@@ -241,7 +243,8 @@ class AdminController extends Controller
     {
         $customer = Customer::where('id', $id)->first();
         $transaction = transaction::where('transactionRef', $request->transactionRef)->first();
-        // dd($transaction);
-        return view('admin\customerDetails', compact('customer', 'transaction'));
+        $carts = Cart::instance('shopping')->restore($request->transactionRef);
+        // dd($carts);
+        return view('admin\customerDetails', compact('customer', 'transaction', 'carts'));
     }
 }

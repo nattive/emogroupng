@@ -198,7 +198,7 @@
                       <h5>Dozen</h5>
                     </td>
                     <td>
-                      <h5>₦ (UNSET)</h5>
+                      <h5>₦{{productpack}}</h5>
                     </td>
                   </tr>
                   <tr>
@@ -228,7 +228,6 @@ export default {
       qtySpec: "Single",
       init_qty: 1,
       prod__price: 0,
-      productDozen: 112000,
       proceedCart: false
     };
   },
@@ -242,7 +241,8 @@ export default {
     "productname",
     "productpack",
     "productstock",
-    "productamount"
+    "productamount",
+    'productcarton'
   ],
   computed: {
     // get only
@@ -250,9 +250,11 @@ export default {
       if (this.qtySpec === "Single") {
         return this.productamount;
       } else if (this.qtySpec === "Dozen") {
-        return this.productDozen;
-      } else {
         return this.productpack;
+      } else if (this.qtySpec === "Carton") {
+        return this.productcarton;
+      } else {
+         return this.productamount;
       }
     }
     // both get and set
