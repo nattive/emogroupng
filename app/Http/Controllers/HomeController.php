@@ -63,7 +63,7 @@ class HomeController extends Controller
     {
         $blogs = blog::all();
         $categories = category::all();
-        return view('blog', compact('blogs', 'categories'));
+        return view('Blog', compact('blogs', 'categories'));
     }
     public function about()
     {

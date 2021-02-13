@@ -27,7 +27,7 @@
 <section class="ftco-section-2 bg-light p-2">
     <div class="container">
         <div class="section-2-blocks-wrapper d-flex row no-gutters">
-            <div class="text col-md-12 ftco-animate">
+            <div class="text col-md-12 col">
                 <div class="text-inner align-self-center text-center">
 
                     <h3 class="heading">Who we are</h3>
