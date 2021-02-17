@@ -54,7 +54,8 @@
                   <h3 class="title">
                     <a :href="'product/' + product.name">{{ product.name }} </a>
                   </h3>
-                  <span class="price">₦{{ product.amount }}</span>
+                  <span class="price">₦{{ product.amount }}</span><br />
+                  <span v-show="product.old_amount > product.amount" class="price" style='text-decoration: line-through; color: red'>₦{{ product.old_amount }}</span>
                 </div>
               </div>
             </div>

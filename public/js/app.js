@@ -3139,6 +3139,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["guestid", "categories"],
@@ -78173,7 +78174,28 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", { staticClass: "price" }, [
                         _vm._v("₦" + _vm._s(product.amount))
-                      ])
+                      ]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: product.old_amount > product.amount,
+                              expression: "product.old_amount > product.amount"
+                            }
+                          ],
+                          staticClass: "price",
+                          staticStyle: {
+                            "text-decoration": "line-through",
+                            color: "red"
+                          }
+                        },
+                        [_vm._v("₦" + _vm._s(product.old_amount))]
+                      )
                     ])
                   ])
                 ]

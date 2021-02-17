@@ -38,6 +38,10 @@
                             <label for="p_amount">Amount</label>
                             <input type="number" class="form-control" name="amount" value="{{ old('amount') }}" required autocomplete="amount" >
                         </div>
+                                 <div class="form-group">
+                            <label for="p_amount">Old Price</label>
+                            <input type="number" class="form-control" name="old_amount" value="{{ old('old_amount') }}" required autocomplete="amount" >
+                        </div>
                         <div class="form-group">
                             <label for="Picture">Price per Pack</label>
                             <div class="input-group">

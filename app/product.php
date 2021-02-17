@@ -15,6 +15,7 @@ class product extends Model
         'image',
         'genderSpec',
         'brand',
+        'old_amount',
         'carton'
     ];
 
