@@ -90,6 +90,7 @@ class AdminController extends Controller
         $validatedData = $request->validate([
             'name' => 'max:255',
             'amount' => 'required',
+            'old_amount' => '',
             'stock' => 'required',
             'carton' => '',
             'Picture' => 'required',
@@ -106,6 +107,7 @@ class AdminController extends Controller
         $product->carton = $request->carton;
         $product->pack = $request->pack;
         $product->amount = $request->amount;
+        $product->old_amount = $request->old_amount;
         $product->description = $request->description;
         if ($request->stock <= 0) {
             $product->stock = 'Out Of Stock';
