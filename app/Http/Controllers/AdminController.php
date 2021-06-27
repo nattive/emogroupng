@@ -100,9 +100,10 @@ class AdminController extends Controller
             'brand' => 'required',
         ]);
         $product = new product;
-        $imagePath = request('Picture')->store('product', 'public');
-        $image = Image::make(public_path("storage/{$imagePath}"))->fit(600, 800);
-        $image->save();
+        $imagePath = \Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
+        // $imagePath = request('Picture')->store('product', 'public');
+        // $image = Image::make(public_path("storage/{$imagePath}"))->fit(600, 800);
+        // $image->save();
         $product->name = $request->name;
         $product->carton = $request->carton;
         $product->pack = $request->pack;

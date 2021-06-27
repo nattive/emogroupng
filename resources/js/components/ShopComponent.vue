@@ -148,7 +148,7 @@
                       <a :href="'/product/' + product.name">
                         <img
                           class="pic-1 img-fluid"
-                          :src="'/storage/' + product.image"
+                          :src="product.image"
                         />
                       </a>
                       <ul class="card-product__imgOverlay">

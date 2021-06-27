@@ -37,12 +37,12 @@
                         and healthcare space.
                         The company was incorporated with the Corporate Affairs Commission and registered as EMO
                         Healthcare Limited. A few years
-                        down the line, we have grown to become a major player not only in the health sector alone but
+                        down the lane, we have grown to become a major player not only in the health sector but
                         also in the world of
                         scents and fragrances.<p>
                             Our goal in EMO Group, is to provide our customers with variety of healthy and high quality
                             personal and healthcare
-                            products. We go ahead to assist them in making the right choices that best suit, their
+                            products. We go ahead to assist them in making the right choices that best suit their
                             individual budgets and needs.
                             Simply put, availability and affordability of high quality body and healthcare products, is
                             our prerogative..</p>
@@ -60,12 +60,9 @@
             <div class="col-md-6 col-sm-12">
                 <h3 class="heading">Our Vision Statement</h3>
                 <p>Everyone wants to smell good but not everyone knows how. To many, every first
-                    impression begins with a good smell. It
-                    seems like when one is wearing an elegant fragrance, one oozes in self-confidence.
-                    It is our desire in EMO Cosmetics and
-                    Perfume, to put the power of choice in the hands of our customers. We do so by
-                    ensuring availability of wide ranging
-                    fragrances from English to Arabic at highly competitive prices..</p>
+                    impression begins with a good smell. It seems like when one is wearing an elegant fragrance, one oozes in self-confidence.
+                    It is our desire in EMO Perfumes and Cosmetics Ltd, to put the power of choice in the hands of our customers. We do so by
+                    ensuring availability of wide range of fragrances, from English to Arabic at highly competitive prices.</p>
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="text-inner align-self-start">
@@ -73,7 +70,7 @@
                     <h3 class="heading">Our Services</h3>
                     <p>In view of the foregoing, we import and market perfumes, oil, colognes, and body
                         deodorants that meet the market needs
-                        of all categories of customers with varying budget brackets, without comprising on
+                        of all categories of customers with varying budget brackets, without Compromising on
                         the quality of these products. Now
                         customers can choose what they want, how they want it and how much they are willing
                         to pay.</p>
@@ -99,7 +96,7 @@
                 <div class="text-inner align-self-start">
 
                     <h3 class="heading">Our Core Values</h3>
-                    <p>Our business philosophy is premised upon the assumption that health is wealth, and that
+                    <p>Our business philosophy is premised on the assumption that health is wealth, and that
                         cleanliness is next to
                         godliness. We would like to add that feeling good is smelling good. This philosophical approach
                         is hinged on the wheels

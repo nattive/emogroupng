@@ -13,18 +13,18 @@
             <div
               v-for="(product, index) in computedProduct"
               :key="index"
-              class="col-lg-3 col-6 product-incfhny mt-4"
+              class="col-lg-3 col-xs-6 product-incfhny mt-4"
             >
               <div class="product-grid2 transmitv">
                 <div class="product-image2">
                    <a :href="'product/' + product.name">
                     <img
                       class="pic-1 img-fluid"
-                      :src="'http://emofragrances.com/storage/' + product.image"
+                      :src="product.image"
                     />
                     <img
                       class="pic-2 img-fluid"
-                      :src="'http://emofragrances.com/storage/' + product.image"
+                      :src="product.image"
                     />
                   </a>
                   <!-- <ul class="social">

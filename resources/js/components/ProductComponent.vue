@@ -25,7 +25,7 @@
         <div class="row s_product_inner">
           <div class="col-lg-6">
             <div class="single-prd-item">
-              <img class="img-fluid" :src="'/storage/'+ productimage" alt />
+              <img class="img-fluid" :src="productimage" alt />
             </div>
             <!-- <div class="single-prd-item">
 							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">

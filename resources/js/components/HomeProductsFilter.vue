@@ -73,7 +73,7 @@
               >
                 <div class="card text-center card-product">
                   <div class="card-product__img">
-                    <img class="card-img" :src="'/storage/'+ product.image" :alt="product.name" />
+                    <img class="card-img" :src="product.image" :alt="product.name" />
                     <ul class="card-product__imgOverlay">
                       <li>
                         <button>

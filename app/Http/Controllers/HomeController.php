@@ -46,7 +46,7 @@ class HomeController extends Controller
     }
     public function product($slug)
     {
-        $product = product::where('name', $slug)->first();
+        $product = product::where('name', $slug)->with(['brand', 'ProductCategory'])->first();
         return view('product', compact('product'));
     }
     public function cart()
