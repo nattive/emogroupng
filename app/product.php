@@ -28,6 +28,6 @@ class product extends Model
     public function brand()
     {
         return
-        $this->belongsTo(product::class);
+        $this->belongsTo(Brand::class);
     }
 }

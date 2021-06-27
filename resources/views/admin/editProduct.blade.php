@@ -32,34 +32,32 @@
             <div class="card card-primary">
 
                 <!-- /.card-header -->
-                <!-- form start -->
-                <form role="form">
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="p_name">Product Name</label>
-                            <input type="text" class="form-control" name="name" value="{{$product -> name ?? ''}}">
-                        </div>
-                        <div class="form-group">
-                            <label for="p_amount">Amount</label>
-                            <input type="number" class="form-control" name="amount"
-                                value="{{$product -> amount ?? ''}}">
-                        </div>
-                        <div class="form-group">
-                            <label for="p_stock">Stock</label>
-                            <input type="number" class="form-control" name="stock" value="{{$product -> stock ?? ''}}"
-                                placeholder="If Stock is 0, Product will indecate out of stock">
-                        </div>
-                        <div class="form-group">
-                            <label for="p_category">category</label>
-                            <input type="text" class="form-control" name="category"
-                                value="{{$product -> category ?? ''}}">
-                            <input type="hidden" name="id" value="{{$product -> id ?? null}}">
-                        </div>
+                <!-- <form role="form">form start -->
 
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="p_name">Product Name</label>
+                        <input type="text" class="form-control" name="name" value="{{$product -> name ?? ''}}">
                     </div>
-                    <!-- /.card-body -->
+                    <div class="form-group">
+                        <label for="p_amount">Amount</label>
+                        <input type="number" class="form-control" name="amount" value="{{$product -> amount ?? ''}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="p_stock">Stock</label>
+                        <input type="number" class="form-control" name="stock" value="{{$product -> stock ?? ''}}"
+                            placeholder="If Stock is 0, Product will indecate out of stock">
+                    </div>
+                    <div class="form-group">
+                        <label for="p_category">category</label>
+                        <input type="text" class="form-control" name="category" value="{{$product -> category ?? ''}}">
+                        <input type="hidden" name="id" value="{{$product -> id ?? null}}">
+                    </div>
 
-                </form>
+                </div>
+                <!--</form> /.card-body -->
+
+
             </div>
 
         </div>
@@ -78,9 +76,10 @@
                                 <input type="file" class="custom-file-input" name="Picture">
                                 <label class="custom-file-label" for="Picture">Choose file</label>
                             </div>
-                            <div class="input-group-append">
+                            <!--        <div class="input-group-append">
                                 <span class="input-group-text" id="">Upload</span>
-                            </div>
+                            </div> -->
+
                         </div>
                     </div>
                     <!-- /.card-body -->
@@ -94,10 +93,12 @@
                 <!-- form start -->
                 <div>
                     <div class="card-body">
-                        <button id="btnSubmit" class="btn btn-success btn-flat">Upload</button>
+                        <button type="submit" id="btnSubmit" class="btn btn-success btn-flat">Upload</button>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 </form>
 @stop
 

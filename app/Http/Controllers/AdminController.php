@@ -99,10 +99,12 @@ class AdminController extends Controller
             'genderSpecification' => 'required',
             'brand' => 'required',
         ]);
-        $product = new product;
-        $imagePath = request('Picture')->store('product', 'public');
-        $image = Image::make(public_path("storage/{$imagePath}"))->fit(600, 800);
-        $image->save();
+           $product = new product;
+        $imagePath = \Cloudinary::upload($request->file('Picture')->getRealPath())->getSecurePath();
+        
+        // $imagePath = request('Picture')->store('product', 'public');
+        // $image = Image::make(public_path("storage/{$imagePath}"))->fit(600, 800);
+        // $image->save();
         $product->name = $request->name;
         $product->carton = $request->carton;
         $product->pack = $request->pack;
@@ -132,7 +134,7 @@ class AdminController extends Controller
     {
         $brands = Brand::all();
         $Categories = ProductCategory::all();
-        return view('admin\createBaC', compact('brands', 'Categories'));
+        return view('admin.createBaC', compact('brands', 'Categories'));
     }
 
     public function createCategory(Request $request)
@@ -170,7 +172,7 @@ class AdminController extends Controller
         return view('admin.addProduct', compact('product'));
     }
 
-    /**jexi
+    /*
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -247,6 +249,6 @@ class AdminController extends Controller
         $transaction = transaction::where('transactionRef', $request->transactionRef)->first();
         $carts = Cart::instance('shopping')->restore($request->transactionRef);
         // dd($carts);
-        return view('admin\customerDetails', compact('customer', 'transaction', 'carts'));
+        return view('admin.customerDetails', compact('customer', 'transaction', 'carts'));
     }
 }

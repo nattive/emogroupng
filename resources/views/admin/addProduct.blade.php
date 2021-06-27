@@ -28,7 +28,7 @@
 
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form role="form">
+                
                     <div class="card-body">
                         <div class="form-group">
                             <label for="p_name">Product Name</label>
@@ -57,7 +57,6 @@
                     </div>
                     <!-- /.card-body -->
 
-                </form>
             </div>
 
         </div>
@@ -71,9 +70,9 @@
                     <div class="form-group">
                         <label for="Picture">Product picture</label>
                         <div class="input-group">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" name="Picture">
-                                <label class="custom-file-label" for="Picture">Choose file</label>
+                           <!-- <div class="custom-file"> -->
+                                <input type="file" class="form-control" name="Picture">
+                                <!-- <label class="custom-file-label" for="Picture">Choose file</label> -->
                             </div>
                             <div class="input-group-append">
                                 <span class="input-group-text" id="">Upload</span>
@@ -167,7 +166,7 @@
         </div>
         <div class="col-12 mb-4">
             <div class="float-right">
-                <button id="btnSubmit" class="btn btn-success btn-flat">Upload</button>
+                <button id="btnSubmit" type="submit" class="btn btn-success btn-flat">Upload</button>
             </div>
         </div>
     </div>
