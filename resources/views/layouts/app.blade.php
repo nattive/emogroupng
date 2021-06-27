@@ -75,14 +75,10 @@
                             quality of these products.</p>
                         <ul class="social-footerhny mt-lg-5 mt-4">
 
-                            <li><a class="facebook" href="#"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                            <li><a class="facebook" href="https://www.facebook.com/emocosmetics"><span class="fa fa-facebook" aria-hidden="true"></span></a>
                             </li>
-                            <li><a class="twitter" href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>
-                            </li>
-                            <li><a class="google" href="#"><span class="fa fa-google-plus"
-                                        aria-hidden="true"></span></a>
-                            </li>
-                            <li><a class="instagram" href="#"><span class="fa fa-instagram"
+                            
+                            <li><a class="instagram" href="https://www.instagram.com/emo_fragrances"><span class="fa fa-instagram"
                                         aria-hidden="true"></span></a>
                             </li>
                         </ul>

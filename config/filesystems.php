@@ -42,6 +42,10 @@ return [
     */
 
     'disks' => [
+        
+       // 'links' => [
+          //  base_path('/public_html/storage') => storage_path('app/public'),
+     //   ],
 
         'local' => [
             'driver' => 'local',
